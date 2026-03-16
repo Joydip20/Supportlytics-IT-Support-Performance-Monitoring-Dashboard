@@ -12,7 +12,7 @@ st.markdown(
 
 st.markdown("---")
 
-file_path = os.path.join(os.path.dirname(__file__), "../dashboard_dataset.xlsx")
+file_path = os.path.join(os.path.dirname(__file__), "dashboard_dataset.xlsx")
 
 df = pd.read_excel(file_path)
 
