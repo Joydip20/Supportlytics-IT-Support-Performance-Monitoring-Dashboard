@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 
 st.set_page_config(page_title="IT Support Performance Dashboard", layout="wide")
 
@@ -11,7 +12,9 @@ st.markdown(
 
 st.markdown("---")
 
-df = pd.read_excel("dashboard_dataset.xlsx")
+file_path = os.path.join(os.path.dirname(__file__), "../dashboard_dataset.xlsx")
+
+df = pd.read_excel(file_path)
 
 df["Date of Purchase"] = pd.to_datetime(df["Date of Purchase"])
 
